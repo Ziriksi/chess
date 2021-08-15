@@ -2,7 +2,7 @@
 function setup() {
   window.__queue = [];
   // Wait.condition only works if you redefine it idfk why but I can put
-  // it in the setup so it does it automatically :)
+  // it in the setup so it does it automatically :v
   Wait.condition = function(condition, callback, untilTrue, name) {
     __queue.push({
       frames: -1,
