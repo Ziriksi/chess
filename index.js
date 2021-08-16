@@ -87,12 +87,14 @@ function getMoves() {
         if(board[mousePos.x + o[0]]) {
           ret.push({
             x: mousePos.x + o[0], 
-            y: mousePos.y + o[1]});
+            y: mousePos.y + o[1]
+          });
         }
         if(board[mousePos.x + o[0]]) {
           ret.push({
             x: mousePos.x + o[0], 
-            y: mousePos.y - o[1]});
+            y: mousePos.y - o[1]
+          });
         }
       }
       return ret;
@@ -103,7 +105,10 @@ function getMoves() {
       var ret = [];
       var d = [mousePos.y + 1, mousePos.x + 1];
       while (isOpen(d[0], d[1])) {
-        ret.push({x: d[1], y: d[0]});
+        ret.push({
+          x: d[1], 
+          y: d[0]
+        });
         if(board[d[0]][d[1]]) {
           break;
         }
@@ -112,7 +117,10 @@ function getMoves() {
       }
       d = [mousePos.y + 1, mousePos.x - 1];
       while (isOpen(d[0], d[1])) {
-        ret.push({x: d[1], y: d[0]});
+        ret.push({
+          x: d[1], 
+          y: d[0]
+        });
         if(board[d[0]][d[1]]) {
           break;
         }
@@ -121,7 +129,10 @@ function getMoves() {
       }
       d = [mousePos.y - 1, mousePos.x + 1];
       while (isOpen(d[0], d[1])) {
-        ret.push({x: d[1], y: d[0]});
+        ret.push({
+          x: d[1], 
+          y: d[0]
+        });
         if(board[d[0]][d[1]]) {
           break;
         }
@@ -130,7 +141,10 @@ function getMoves() {
       }
       d = [mousePos.y - 1, mousePos.x - 1];
       while (isOpen(d[0], d[1])) {
-        ret.push({x: d[1], y: d[0]});
+        ret.push({
+          x: d[1], 
+          y: d[0]
+        });
         if(board[d[0]][d[1]]) {
           break;
         }
@@ -145,7 +159,10 @@ function getMoves() {
       var ret = [];
       var d = mousePos.y + 1;
       while (isOpen(d, mousePos.x)) {
-        ret.push({x: mousePos.x, y: d});
+        ret.push({
+          x: mousePos.x, 
+          y: d
+        });
         if(board[d][mousePos.x]) {
           break;
         }
@@ -153,7 +170,10 @@ function getMoves() {
       }
       d = mousePos.y - 1;
       while (isOpen(d, mousePos.x)) {
-        ret.push({x: mousePos.x, y: d});
+        ret.push({
+          x: mousePos.x, 
+          y: d
+        });
         if(board[d][mousePos.x]) {
           break;
         }
@@ -161,7 +181,10 @@ function getMoves() {
       }
       d = mousePos.x + 1;
       while (isOpen(mousePos.y, d)) {
-        ret.push({x: d, y: mousePos.y});
+        ret.push({
+          x: d, 
+          y: mousePos.y
+        });
         if(board[mousePos.y][d]) {
           break;
         }
@@ -169,7 +192,10 @@ function getMoves() {
       }
       d = mousePos.x - 1;
       while (isOpen(mousePos.y, d)) {
-        ret.push({x: d, y: mousePos.y});
+        ret.push({
+          x: d, 
+          y: mousePos.y
+        });
         if(board[mousePos.y][d]) {
           break;
         }
